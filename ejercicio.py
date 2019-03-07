@@ -28,6 +28,14 @@ while opcion >= 0:
 		for convenio in datos["convenios"]:
 			if convenio["numeroinscripcion"] == numinsc:
 				print(convenio["entidades"][0]["entidad"])
+	elif opcion == 5:
+		lista=[]
+		area=input("Escribe un area: ")
+		print("Estos son los titulos de los convenios asociados a ese area:")
+		print(" ")
+		for convenio in datos["convenios"]:
+			if convenio["area"] == area:
+				print("- "+convenio["titulo"].lower())
 
 	print("Elige una opción: ")
 	print("1.- ejercicio 1: ")
